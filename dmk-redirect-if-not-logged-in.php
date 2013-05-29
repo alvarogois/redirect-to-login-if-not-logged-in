@@ -1,32 +1,32 @@
 <?php
 /**
- * @package Redirect if not logged in
- * @version 0.1
+ * @package Redirect to login if not logged in
+ * @version 1.0
  */
 /*
-Plugin Name: Redirect if not logged in
-Plugin URI: 
-Description: Redirect to wp-login.php if user is not logged in.
+Plugin Name: Redirect to login if not logged in
+Plugin URI: http://daan.kortenba.ch/redirect-to-wp-login-php-if-user-is-not-logged-in/
+Description: Redirects site visitors to the login page if the visitor is not logged in. This plugin is used fairly often for sites in development or sites only available for registered users.
 Author: Daan Kortenbach
-Version: 0.1
-Author URI: http://krtnb.ch/
+Version: 1.0
+Author URI: http://daan.kortenba.ch/
 */
 
-add_action( 'wp', 'dmk_not_loggedin_redirect' );
+add_action( 'wp', 'dk_redirect_to_login_if_not_logged_in', 1 );
 
 /**
  * Redirect to wp-login.php if user is not logged in.
  *
  * @author Daan Kortenbach
- * 
+ *
  * @global string $pagenow
- * @return void redirect
+ * @return void redirect to login.php
  */
-function dmk_not_loggedin_redirect() {
+function dk_redirect_to_login_if_not_logged_in() {
 
 	global $pagenow;
 
-	if(!is_user_logged_in() && $pagenow != 'wp-login.php')
-		wp_redirect( home_url() . '/wp-login.php', 302 );
-
+	// If the visitor is not logged in, redirect to login url
+	if ( ! is_user_logged_in() && $pagenow != 'wp-login.php' )
+		wp_redirect( wp_login_url() );
 }
