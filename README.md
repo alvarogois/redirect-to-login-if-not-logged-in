@@ -5,7 +5,7 @@
 **Tags:** redirect, login  
 **Requires at least:** 3.0.1  
 **Tested up to:** 3.6  
-**Stable tag:** 1.2  
+**Stable tag:** 1.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -19,6 +19,9 @@ Redirects site visitors to the login page if the visitor is not logged in. This 
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 ## Changelog ##
+
+### 1.3 ###
+* Plugin naming.
 
 ### 1.2 ###
 * Releasing to the WordPress plugin repo.
