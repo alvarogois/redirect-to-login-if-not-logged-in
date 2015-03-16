@@ -21,7 +21,7 @@ Redirects a user to the login page if the user is not logged in. After login the
 ## Changelog ##
 
 ### 1.6 ###
-* WordPress 4.1.1 compatibility update
+* WordPress 4.1.1 compatibility update.
 
 ### 1.5 ###
 * Complete rewrite to use the already existing auth_redirect hook.
